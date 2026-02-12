@@ -1,133 +1,360 @@
-*{
-    padding:0;
-    margin:0;
-}
-body{
-    width: 99%;
-    height: 97%;
-    background-image: url('Background2.png');
-    background-size:cover;
-}
-.top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 80px;
-    align-items:center;
-    padding:0px 40px;
-}
-.logo{
-    font-size: 30px;
-    color:orange;
-}
-.nav{
-    position: relative;
-    left:-180px;
-}
-a{
-    padding:5px 15px;
-    color:orange;
-    font-size: 20px;
-    text-decoration:none;
-}
-a:hover{
-    color:white;
-    text-decoration: underline;
-    text-underline-position:under;
-}
-.search{
-    font-size: 25px;
-}
-.search i{
-    padding:5px 20px;
-}
-/************heading**************/
-.heading{
-    display: flex;
-    justify-content: space-evenly;
-    padding-top:65px;
-    align-items:center;
-}
-.right{
-    width: 440px;
-    height: 440px;
-    background-image: url('food.jpg');
-    background-size:cover;
-    border-radius: 400px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-.right::before{
-    width: 430px;
-    height: 430px;
-    border:2px solid white;
-    content: '';
-    position: absolute;
-    border-radius: 430px;
-    padding:10px;
+/* Global reset */
+* {
+    padding: 0; margin: 0; box-sizing: border-box;
 }
 
-/**********left************/
-.left p:nth-child(1){
-    color: white;
-    font-size: 30px;
-    letter-spacing: 1px;
+/* Body and Background */
+body {
+    width: 100%;height: 100%;background-image: url('Background2.png');background-size: cover;background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Top navigation */
+.top {
+    display: flex;justify-content: space-between;align-items: center;height: 80px;padding: 0 40px;
+}
+
+.logo {
+    font-size: 30px;color: orange;
+}
+
+.nav {
+    display: flex;gap: 20px;
+}
+
+a {
+    padding: 5px 15px;color: orange;font-size: 20px;text-decoration: none;
+}
+
+a:hover {
+    color: white;text-decoration: underline;text-underline-position: under;
+}
+
+.search {
+    font-size: 25px;
+}
+
+.search i {
+    padding: 5px 20px;
+}
+
+/* Heading Section */
+.heading {
+    display: flex; justify-content: space-evenly;align-items: center; padding-top: 65px;flex-wrap: wrap;
+}
+
+.right {
+    width: 440px;height: 440px;background-image: url('food.jpg');background-size: cover;border-radius: 50%;display: flex;justify-content: center;align-items: center;
+    position: relative;
+}
+
+.right::before {
+    content: '';width: 430px;height: 430px;border: 2px solid white;position: absolute;border-radius: 50%;padding: 10px;
+}
+
+.left p:nth-child(1) {
+    color: white; font-size: 30px;letter-spacing: 1px;font-style: italic;
+}
+
+.left h1 {
+    font-size: 90px;color: white;
+}
+
+.left p:nth-child(3) {
+    color: orange;font-size: 30px;
     font-style: italic;
 }
-.left h1{
-    font-size: 90px;
-    color:white;
-}
-.left p:nth-child(3){
-    color: orange;
-    font-size: 30px;
-    font-style: italic;
-}
-.left button{
+
+.left button {
     width: 150px;
-    height: 30px;
-    font-size: 15px;
+    height: 40px;
+    font-size: 18px;
     border-radius: 20px;
-    border:2px solid white;
-    background-color:transparent;
-    color:white;
-    margin:20px 0px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    margin: 20px 0;
+    cursor: pointer;
 }
-/*********SocialMedia***************/
-.SocialMedia{
+
+.left button:hover {
+    background-color: orange;
+}
+
+/* Social Media Section */
+.SocialMedia {
     position: absolute;
     right: 0;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     flex-direction: column;
-    width: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 50px;
     height: 200px;
-    background-color:white;
     font-size: 25px;
-
 }
+
+.SocialMedia i {
+    padding: 10px;
+}
+
 .SocialMedia i:hover {
-    color:orange;
+    color: orange;
 }
 
-
-/***************bottom***************/
-#food1,#food2{
-    background-size:cover;
+/* Food Section */
+#food1, #food2 {
+    background-size: cover;
     width: 100px;
     height: 100px;
-    border-radius: 100px;
-    margin:0px 20px;
+    border-radius: 50%;
+    margin: 0 20px;
 }
-#food1{
+
+#food1 {
     background-image: url('food1.png');
 }
-#food2{
+
+#food2 {
     background-image: url('food.jpg');
 }
-.menu{
+
+/* Menu Section */
+.menu {
     display: flex;
-    margin:0px 100px;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 30px;
+}
+
+/* Food Cards */
+.crd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 280px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    color: orange;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.card p {
+    color: #555;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.card button {
+    width: 120px;
+    height: 35px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.card button:hover {
+    background-color: darkorange;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin: 40px auto;  /* Provides space around the table */
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+table th {
+    background-color: orange;
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+table tr:hover td {
+    background-color: #ddd;
+}
+
+table button {
+    width: 120px;
+    height: 35px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+table button:hover {
+    background-color: darkorange;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .top {
+        padding: 0 20px;
+    }
+
+    .heading {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+
+    .right {
+        width: 350px;
+        height: 350px;
+    }
+
+    .left h1 {
+        font-size: 70px;
+    }
+
+    .left button {
+        width: 130px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .heading {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right {
+        width: 300px;
+        height: 300px;
+    }
+
+    .left h1 {
+        font-size: 60px;
+    }
+
+    .left button {
+        width: 120px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav a {
+        font-size: 18px;
+    }
+
+    .heading {
+        padding-top: 30px;
+    }
+
+    .right {
+        width: 250px;
+        height: 250px;
+    }
+
+    .left h1 {
+        font-size: 50px;
+    }
+
+    .left p, .left button {
+        font-size: 18px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 12px;
+    }
 }
