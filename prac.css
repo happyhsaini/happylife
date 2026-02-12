@@ -1,0 +1,26 @@
+
+#header{
+    background-color: bisque;
+    height: 255px;
+    width: auto;
+    color: bisque;
+
+}
+#footer{
+    background-color: bisque;
+    height: 50px;
+    width: auto;
+    color: bisque;
+
+}
+#content{
+    background-color: bisque;
+    height: 50px;
+    width: auto;
+    color: bisque;
+
+}
+table{
+    color:rgb(20, 6, 6);
+    background-color: bisque;
+}
